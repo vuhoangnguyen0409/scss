@@ -1,0 +1,67 @@
+.box03 {
+  margin: 0 auto;
+  width: 1100px; }
+  .box03 .ColLeft {
+    background: #5d8f5d;
+    height: 500px; }
+    .box03 .ColLeft a {
+      text-align: center; }
+  .box03 .ColMain {
+    background: #b1a14c;
+    height: 500px; }
+  .box03 .ColRight {
+    background: #6f81bd;
+    height: 500px; }
+
+/*2col left*/
+.box03 .ColLeft {
+  float: left;
+  width: 20%; }
+
+.box03 .ColRight {
+  display: none; }
+
+.box03 .ColMain {
+  float: right;
+  width: 80%; }
+
+h1 {
+  font-size: 22px; }
+
+.box01 h2 {
+  color: red; }
+
+.box01 p {
+  font-size: 15px; }
+  .box01 p.classname {
+    color: red; }
+
+ul {
+  background: red; }
+  ul li:last-child {
+    color: red; }
+
+/*cham suyet*/
+h1 {
+  color: #cf2d3a; }
+
+.box02 {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  width: 100%; }
+
+.box3 {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  width: 100%; }
+
+.box02 {
+  background: #000;
+  color: #fff; }
+
+.box04 {
+  background: red;
+  color: green;
+  border: 5px; }

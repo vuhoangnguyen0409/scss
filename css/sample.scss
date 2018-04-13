@@ -1,0 +1,161 @@
+@charset "utf-8"; // IF
+$column: twoColumnLeft;
+$wrapperWidth: 1100px;
+
+.box03 {
+  margin: 0 auto;
+  width: $wrapperWidth;
+
+  .ColLeft {
+    background: rgba(93,143,93,1.00);
+    height: 500px;
+
+    a {
+      text-align: center;
+    }
+  }
+
+  .ColMain {
+    background: rgba(177,161,76,1.00);
+    height: 500px;
+  }
+
+  .ColRight {
+    background: rgba(111,129,189,1.00);
+    height: 500px;
+  }
+}
+@if $column == oneColumn {
+  /*1col*/
+  .box03 {
+    .ColLeft {
+      display: none;
+    }
+
+    .ColRight {
+      display: none;
+    }
+
+    .ColMain {
+      float: none;
+      width: 100%;
+    }
+  }
+}
+@if $column == twoColumnLeft {
+  /*2col left*/
+  .box03 {
+    .ColLeft {
+      float: left;
+      width: 20%;
+    }
+
+    .ColRight {
+      display: none;
+    }
+
+    .ColMain {
+      float: right;
+      width: 80%;
+    }
+  }
+}
+@if $column == twoColumnRight {
+  /*2col right*/
+  .box03 {
+    .ColLeft {
+      display: none;
+    }
+
+    .ColRight {
+      float: right;
+      width: 20%;
+    }
+
+    .ColMain {
+      float: left;
+      width: 80%;
+    }
+  }
+}
+@if $column == threeColumn {
+  .box03 {
+    .ColLeft {
+      float: left;
+      width: 20%;
+    }
+
+    .ColRight {
+      float: right;
+      width: 20%;
+    }
+
+    .ColMain {
+      float: left;
+      width: 60%;
+    }
+  }
+}
+
+h1 {
+  font-size: 22px;
+}
+
+.box01 {
+  h2 {
+    color: red;
+  }
+
+  p {
+    font-size: 15px;
+
+    &.classname {
+      // class
+      color: red;
+    }
+  }
+}
+
+ul {
+  background: red;
+
+  li {
+    &:last-child {
+      color: red;
+    }
+  }
+}
+// suyet suyet
+/*cham suyet*/
+$base-color: #cf2d3a;
+
+h1 {
+  color: $base-color;
+}
+@mixin samplecss {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  width: 100%;
+}
+
+.box02 {
+  @include samplecss;
+}
+
+.box3 {
+  @include samplecss;
+}
+@mixin setColor_setBg($bcolor: #aaa, $color:#bbb) {
+  background: $bcolor;
+  color: $color;
+}
+
+.box02 {
+  @include setColor_setBg(#000, #fff);
+}
+
+.box04 {
+  @include setColor_setBg(red, green);
+  border: 5px;
+}

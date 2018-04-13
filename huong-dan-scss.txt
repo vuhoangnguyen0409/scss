@@ -1,0 +1,7 @@
+﻿tạo file .scss
+chạy koala
+chọn project
+chọn file .scss -> set output path -> .css
+file html href -> .css
+code trên file .scss , (có thể xem trên file .css)
+chỉnh sửa mở koala -> open file
